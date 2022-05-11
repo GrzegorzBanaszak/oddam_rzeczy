@@ -10,7 +10,7 @@ const Nav = () => {
         </RouterLink>
         <RouterLink
           className="nav-top-link nav-top-link-border"
-          to="/rejstracja"
+          to="/rejestracja"
         >
           Załóż konto
         </RouterLink>
@@ -18,7 +18,7 @@ const Nav = () => {
       <div className="nav-bottom">
         <ScrollLink
           className="nav-bottom-link"
-          to="test1"
+          to="open"
           smooth={true}
           offset={50}
           duration={500}
@@ -27,7 +27,7 @@ const Nav = () => {
         </ScrollLink>
         <ScrollLink
           className="nav-bottom-link"
-          to="test1"
+          to="three-columnes"
           smooth={true}
           offset={50}
           duration={500}
