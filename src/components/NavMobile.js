@@ -14,7 +14,7 @@ const NavMobile = () => {
           </RouterLink>
           <RouterLink
             className="nav-top-link nav-top-link-border"
-            to="/rejstracja"
+            to="/rejestracja"
           >
             Załóż konto
           </RouterLink>
@@ -39,7 +39,7 @@ const NavMobile = () => {
           </ScrollLink>
           <ScrollLink
             className="nav-mobile-bottom-link"
-            to="test1"
+            to="three-columnes"
             smooth={true}
             offset={50}
             duration={500}
