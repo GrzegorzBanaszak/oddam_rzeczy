@@ -2,6 +2,7 @@
     height: 100vh;
     width: 100%;
     display: flex;
+    font-family: $font-alt;
 }
 
 .open-left{
@@ -15,4 +16,42 @@
     width: 50%;
     height: 100%;
     margin-right: 10vw;
+}
+.open-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.content-title{
+    font-size: 2.2rem;
+    margin: 0.5rem;
+    text-align: center;
+    color:$color-green;
+    font-weight: 400;
+}
+.content-btns{
+    margin-top: 3rem;
+    display: flex;
+    gap:1rem;
+}
+.content-decoration{
+    margin: 2rem 0;
+}
+.content-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 310px;
+    height: 120px;
+    font-size: 2rem;
+    font-weight: 300;
+    border:1px solid $color-gray;
+    color:$color-gray;
+}
+
+@include desktop{
+    
 }
