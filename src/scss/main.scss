@@ -2,8 +2,14 @@
 @import "settings/mixins";
 @import "settings/colors";
 @import "components/home-open";
+@import "components/home-three-columnes";
 @import "components/nav";
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: $font-base;
 }
