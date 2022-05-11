@@ -12,7 +12,7 @@ const Home = () => {
           style={{ backgroundImage: `url(${banner})` }}
         ></div>
         <div className="open-right">
-          <Nav />
+          {/* <Nav /> */}
           <div className="open-content">
             <h2 className="content-title">Zacznij pomagać!</h2>
             <h2 className="content-title">
