@@ -1,5 +1,6 @@
 import React from "react";
 import bg from "../assets/columnes.png";
+import ThreeColumnItem from "./ThreeColumnItem";
 const HomeThreeColumnes = () => {
   return (
     <section
@@ -8,30 +9,18 @@ const HomeThreeColumnes = () => {
       className="three-columnes"
     >
       <div className="three-columnes-container">
-        <article className="three-columnes-item">
-          <h3 className="three-columnes-title">10</h3>
-          <h5 className="three-columnes-subtitle">ODDANYCH WORKÓW</h5>
-          <p className="three-columnes-description">
-            Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel
-            enim a elit viverra elementuma. Aliquam erat volutpat.
-          </p>
-        </article>
-        <article className="three-columnes-item">
-          <h3 className="three-columnes-title">5</h3>
-          <h5 className="three-columnes-subtitle">WSPARTYCH ORGANIZACJI</h5>
-          <p className="three-columnes-description">
-            Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel
-            enim a elit viverra elementuma. Aliquam erat volutpat.
-          </p>
-        </article>
-        <article className="three-columnes-item">
-          <h3 className="three-columnes-title">7</h3>
-          <h5 className="three-columnes-subtitle">ZORGANIZOWANY ZBIÓREK</h5>
-          <p className="three-columnes-description">
-            Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel
-            enim a elit viverra elementuma. Aliquam erat volutpat.
-          </p>
-        </article>
+        <ThreeColumnItem title={"10"} subtitle={"ODDANYCH WORKÓW"}>
+          Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim
+          a elit viverra elementuma. Aliquam erat volutpat.
+        </ThreeColumnItem>
+        <ThreeColumnItem title={"5"} subtitle={"WSPARTYCH ORGANIZACJI"}>
+          Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim
+          a elit viverra elementuma. Aliquam erat volutpat.
+        </ThreeColumnItem>
+        <ThreeColumnItem title={"7"} subtitle={"ZORGANIZOWANY ZBIÓREK"}>
+          Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim
+          a elit viverra elementuma. Aliquam erat volutpat.
+        </ThreeColumnItem>
       </div>
     </section>
   );
