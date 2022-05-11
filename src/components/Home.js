@@ -3,6 +3,7 @@ import banner from "../assets/Home-Hero-Image.jpg";
 import Nav from "./Nav";
 import decoration from "../assets/Decoration.svg";
 import { Link } from "react-router-dom";
+import NavMobile from "./NavMobile";
 const Home = () => {
   return (
     <>
@@ -12,7 +13,8 @@ const Home = () => {
           style={{ backgroundImage: `url(${banner})` }}
         ></div>
         <div className="open-right">
-          {/* <Nav /> */}
+          <Nav />
+          <NavMobile />
           <div className="open-content">
             <h2 className="content-title">Zacznij pomagać!</h2>
             <h2 className="content-title">

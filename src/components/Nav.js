@@ -3,7 +3,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll/modules";
 const Nav = () => {
   return (
-    <nav className="nav">
+    <nav className="nav-desktop">
       <div className="nav-top">
         <RouterLink className="nav-top-link" to="/logowanie">
           Zaloguj
