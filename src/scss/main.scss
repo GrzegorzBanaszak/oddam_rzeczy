@@ -1,2 +1,9 @@
-@use "fonts";
-@use "colors";
+@import "settings/fonts";
+@import "settings/mixins";
+@import "settings/colors";
+@import "components/home-open";
+@import "components/nav";
+
+body{
+    font-family: $font-base;
+}
