@@ -1,6 +1,7 @@
 .open{
     height: 100vh;
     width: 100%;
+    display: flex;
 }
 
 .open-left{
@@ -9,4 +10,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
+}
+.open-right{
+    width: 50%;
+    height: 100%;
+    margin-right: 10vw;
 }
