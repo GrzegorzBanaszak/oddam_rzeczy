@@ -1,2 +1,3 @@
-@use "fonts";
-@use "colors";
+@import "settings/fonts";
+@import "settings/colors";
+@import "components/home-open";
