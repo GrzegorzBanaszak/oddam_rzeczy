@@ -1,3 +1,43 @@
 .about {
   height: 100vh;
+  display: flex;
+  color: $color-green;
+  flex-direction: column;
+  &-left {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-right {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-title {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  &-decoration {
+    margin: 1rem 0;
+    width: 10rem;
+  }
+  &-description {
+    margin: 1rem 0;
+    width: 60%;
+    text-align: center;
+    line-height: 1.5rem;
+  }
+  &-signature {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      width: 8rem;
+    }
+  }
 }

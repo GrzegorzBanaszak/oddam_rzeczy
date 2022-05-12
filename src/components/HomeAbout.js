@@ -6,8 +6,12 @@ const HomeAbout = () => {
   return (
     <section id="about" className="about">
       <div className="about-left">
-        <h4 className="about-title">O nas</h4>
-        <img src={decoration} alt="about-decoration" />
+        <h3 className="about-title">O nas</h3>
+        <img
+          src={decoration}
+          alt="about-decoration"
+          className="about-decoration"
+        />
         <p className="about-description">
           Nori grape silver beet broccoli kombu beet greens fava bean potato
           quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
@@ -17,7 +21,10 @@ const HomeAbout = () => {
           <img src={signature} alt="signature" />
         </div>
       </div>
-      <div className="about-right" style={{ backgroundImage: people }}></div>
+      <div
+        className="about-right"
+        style={{ backgroundImage: `url(${people})` }}
+      ></div>
     </section>
   );
 };
