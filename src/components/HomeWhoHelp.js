@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import decoration from "../assets/Decoration.svg";
 import WhoHelpControler from "./WhoHelpControler";
+import { WhoHelpList } from "./WhoHelpList";
 const HomeWhoHelp = () => {
   const [selected, setSelected] = useState("funkcjom");
   return (
@@ -43,8 +44,9 @@ const HomeWhoHelp = () => {
             czego potrzebują.
           </p>
         </div>
-
-        {/* Sekcja organizacji */}
+        <div className="who-help-bottom">
+          <WhoHelpList selected={selected} />
+        </div>
       </div>
     </section>
   );

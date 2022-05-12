@@ -37,4 +37,37 @@
   .active {
     border: 1px solid $color-green;
   }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid $color-green;
+  }
+  .item-title {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+  .item-stuff {
+    font-weight: 400;
+  }
+}
+
+@include desktop {
+  .who-help {
+    &-description {
+      width: 50%;
+    }
+    &-controler {
+      padding: 1.2rem 2rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    &-bottom {
+      width: 70%;
+      margin: 1rem auto;
+    }
+  }
 }
