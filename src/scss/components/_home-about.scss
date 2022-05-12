@@ -3,12 +3,14 @@
   display: flex;
   color: $color-green;
   flex-direction: column;
+
   &-left {
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $color-white;
   }
   &-right {
     height: 50%;
@@ -38,6 +40,19 @@
     justify-content: flex-end;
     img {
       width: 8rem;
+    }
+  }
+}
+@include desktop {
+  .about {
+    flex-direction: row;
+    &-left {
+      height: 100%;
+      width: 50%;
+    }
+    &-right {
+      height: 100%;
+      width: 50%;
     }
   }
 }
