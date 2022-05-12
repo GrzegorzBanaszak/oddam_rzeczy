@@ -22,7 +22,27 @@
     display: flex;
     justify-content: right;
     align-items: center;
-    height: 90%;
+    height: 96%;
+  }
+  &-bottom {
+    display: flex;
+    align-items: center;
+  }
+  &-copyright {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+  }
+  &-icons {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    img {
+      cursor: pointer;
+    }
   }
 }
 
