@@ -3,9 +3,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { helpList } from "../helpList";
 import WhoHelpItem from "./WhoHelpItem";
-export const WhoHelpList = ({ selected }) => {
+export const WhoHelpList = ({ selected, length, setLength }) => {
   const [list, setList] = useState([]);
-  const [length, setlength] = useState(0);
   const [pagination, setPagination] = useState([]);
 
   const initialPagination = (length) => {
@@ -18,9 +17,9 @@ export const WhoHelpList = ({ selected }) => {
 
   const changeDisplay = (number) => {
     if (number === 0) {
-      setlength(0);
+      setLength(0);
     } else {
-      setlength(number * 3);
+      setLength(number * 3);
     }
   };
   const getSelected = () => {

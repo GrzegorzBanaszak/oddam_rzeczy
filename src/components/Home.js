@@ -1,5 +1,6 @@
 import React from "react";
 import HomeAbout from "./HomeAbout";
+import HomeContact from "./HomeContact";
 import HomeOpen from "./HomeOpen";
 import HomeSimpleSteps from "./HomeSimpleSteps";
 import HomeThreeColumnes from "./HomeThreeColumnes";
@@ -13,6 +14,7 @@ const Home = () => {
       <HomeSimpleSteps />
       <HomeAbout />
       <HomeWhoHelp />
+      <HomeContact />
     </>
   );
 };
