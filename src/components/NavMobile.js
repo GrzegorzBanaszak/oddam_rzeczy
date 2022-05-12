@@ -32,7 +32,7 @@ const NavMobile = () => {
             className="nav-mobile-bottom-link"
             to="test1"
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
           >
             Start
@@ -41,16 +41,16 @@ const NavMobile = () => {
             className="nav-mobile-bottom-link"
             to="three-columnes"
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
           >
             O co chodzi?
           </ScrollLink>
           <ScrollLink
             className="nav-mobile-bottom-link"
-            to="test1"
+            to="simple-steps"
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
           >
             O nas
