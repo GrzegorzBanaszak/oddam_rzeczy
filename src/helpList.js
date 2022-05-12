@@ -37,6 +37,16 @@ export const helpList = [
         description: "opis funkcji 7",
         stuff: "rzecz 1 ,rzecz 2 ,rzecz 3",
       },
+      {
+        title: "Funkcja 8",
+        description: "opis funkcji 8",
+        stuff: "rzecz 1 ,rzecz 2 ,rzecz 3",
+      },
+      {
+        title: "Funkcja 9",
+        description: "opis funkcji 9",
+        stuff: "rzecz 1 ,rzecz 2 ,rzecz 3",
+      },
     ],
   },
   {
@@ -90,21 +100,6 @@ export const helpList = [
       {
         title: "Zbiórka 3",
         description: "opis zbiórki 3",
-        stuff: "rzecz 1 ,rzecz 2 ,rzecz 3",
-      },
-      {
-        title: "Zbiórka 4",
-        description: "opis zbiórki 4",
-        stuff: "rzecz 1 ,rzecz 2 ,rzecz 3",
-      },
-      {
-        title: "Zbiórka 5",
-        description: "opis zbiórki 5",
-        stuff: "rzecz 1 ,rzecz 2 ,rzecz 3",
-      },
-      {
-        title: "Zbiórka 6",
-        description: "opis zbiórki 6",
         stuff: "rzecz 1 ,rzecz 2 ,rzecz 3",
       },
     ],

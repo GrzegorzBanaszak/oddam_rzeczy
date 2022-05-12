@@ -41,17 +41,18 @@ export const WhoHelpList = ({ selected }) => {
             .map((item, index) => <WhoHelpItem key={index} item={item} />)}
       </div>
       <div className="who-help-pagination">
-        {pagination.map((item, index) => (
-          <div
-            className={`pagination-item ${
-              item === length / 3 ? "pagination-active" : ""
-            }`}
-            key={index}
-            onClick={() => changeDisplay(item)}
-          >
-            {item + 1}
-          </div>
-        ))}
+        {list.length > 3 &&
+          pagination.map((item, index) => (
+            <div
+              className={`pagination-item ${
+                item === length / 3 ? "pagination-active" : ""
+              }`}
+              key={index}
+              onClick={() => changeDisplay(item)}
+            >
+              {item + 1}
+            </div>
+          ))}
       </div>
     </>
   );
