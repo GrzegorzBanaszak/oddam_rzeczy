@@ -32,6 +32,11 @@ export const helpList = [
         description: "opis funkcji 6",
         stuff: "rzecz 1 ,rzecz 2 ,rzecz 3",
       },
+      {
+        title: "Funkcja 7",
+        description: "opis funkcji 7",
+        stuff: "rzecz 1 ,rzecz 2 ,rzecz 3",
+      },
     ],
   },
   {

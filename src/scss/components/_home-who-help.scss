@@ -37,7 +37,9 @@
   .active {
     border: 1px solid $color-green;
   }
-
+  &-list {
+    min-height: 265px;
+  }
   &-item {
     display: flex;
     justify-content: space-between;
@@ -52,6 +54,20 @@
   }
   .item-stuff {
     font-weight: 400;
+  }
+
+  &-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .pagination-item {
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+  }
+  .pagination-active {
+    border: 1px solid $color-green;
   }
 }
 
