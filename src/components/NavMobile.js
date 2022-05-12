@@ -57,7 +57,7 @@ const NavMobile = () => {
           </ScrollLink>
           <ScrollLink
             className="nav-mobile-bottom-link"
-            to="about"
+            to="who-help"
             smooth={true}
             offset={50}
             duration={500}
@@ -66,7 +66,7 @@ const NavMobile = () => {
           </ScrollLink>
           <ScrollLink
             className="nav-mobile-bottom-link"
-            to="test1"
+            to="contact"
             smooth={true}
             offset={50}
             duration={500}

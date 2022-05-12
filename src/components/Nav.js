@@ -45,7 +45,7 @@ const Nav = () => {
         </ScrollLink>
         <ScrollLink
           className="nav-bottom-link"
-          to="about"
+          to="who-help"
           smooth={true}
           offset={0}
           duration={500}
@@ -54,7 +54,7 @@ const Nav = () => {
         </ScrollLink>
         <ScrollLink
           className="nav-bottom-link"
-          to="test1"
+          to="contact"
           smooth={true}
           offset={0}
           duration={500}
