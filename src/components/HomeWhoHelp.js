@@ -5,6 +5,15 @@ import WhoHelpControler from "./WhoHelpControler";
 import { WhoHelpList } from "./WhoHelpList";
 const HomeWhoHelp = () => {
   const [selected, setSelected] = useState("funkcjom");
+  const [length, setLength] = useState(0);
+
+  const handelSelectedChange = (selectedType) => {
+    if (selected !== selectedType) {
+      setLength(0);
+    }
+    setSelected(selectedType);
+  };
+
   return (
     <section id="who-help" className="who-help">
       <div className="who-help-container">
@@ -19,21 +28,21 @@ const HomeWhoHelp = () => {
             <WhoHelpControler
               type="funkcjom"
               isSelected={selected === "funkcjom"}
-              setType={setSelected}
+              setType={handelSelectedChange}
             >
               Fundacjom
             </WhoHelpControler>
             <WhoHelpControler
               type="organizacja"
               isSelected={selected === "organizacja"}
-              setType={setSelected}
+              setType={handelSelectedChange}
             >
               Organizacjom pozarządowym
             </WhoHelpControler>
             <WhoHelpControler
               type="zbiorką"
               isSelected={selected === "zbiorką"}
-              setType={setSelected}
+              setType={handelSelectedChange}
             >
               Lokalnym zbiórkom
             </WhoHelpControler>
@@ -45,7 +54,11 @@ const HomeWhoHelp = () => {
           </p>
         </div>
         <div className="who-help-bottom">
-          <WhoHelpList selected={selected} />
+          <WhoHelpList
+            selected={selected}
+            length={length}
+            setLength={setLength}
+          />
         </div>
       </div>
     </section>
