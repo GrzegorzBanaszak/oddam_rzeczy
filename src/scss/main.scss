@@ -3,13 +3,14 @@
 @import "settings/colors";
 @import "components/home-open";
 @import "components/home-three-columnes";
+@import "components/home-simple-steps";
 @import "components/nav";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: $font-base;
+body {
+  font-family: $font-base;
 }

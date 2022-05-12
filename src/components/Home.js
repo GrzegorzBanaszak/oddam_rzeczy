@@ -1,5 +1,6 @@
 import React from "react";
 import HomeOpen from "./HomeOpen";
+import HomeSimpleSteps from "./HomeSimpleSteps";
 import HomeThreeColumnes from "./HomeThreeColumnes";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <>
       <HomeOpen />
       <HomeThreeColumnes />
+      <HomeSimpleSteps />
     </>
   );
 };

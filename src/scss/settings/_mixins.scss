@@ -1,7 +1,26 @@
-
 $desktop-width: 1024px;
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;
+  }
+}
+
+@mixin buttonLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: 300;
+  border: 1px solid $color-gray;
+  color: $color-gray;
+  @include desktop {
+    & {
+      width: 310px;
+      height: 120px;
+      font-size: 2rem;
+    }
   }
 }
