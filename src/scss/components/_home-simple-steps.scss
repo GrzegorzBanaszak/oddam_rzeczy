@@ -1,7 +1,48 @@
 .simple-steps-container {
-  margin: 0 10vw;
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.simple-steps {
+  color: $color-green;
+
+  &-title {
+    font-size: 2.3rem;
+    font-weight: 400;
+  }
+  &-decoration {
+    margin-top: 1.3rem;
+  }
+  &-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+    background-color: $color-white;
+    padding: 4rem 20vw;
+  }
+}
+
+.simple-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-title {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  &-description {
+    border-top: 2px solid #707070;
+    padding-top: 0.7rem;
+    width: 8rem;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.simple-steps-btn {
+  @include buttonLink;
 }
