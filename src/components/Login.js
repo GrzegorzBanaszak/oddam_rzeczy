@@ -4,20 +4,20 @@ import decoration from "../assets/Decoration.svg";
 import { Link } from "react-router-dom";
 const Login = () => {
   return (
-    <section className="login">
+    <section className="panel">
       <Nav />
-      <div className="login-container">
-        <h2 className="login-header">Zaloguj się</h2>
-        <img className="login-decoration" src={decoration} alt="decoration" />
-        <form>
-          <div className="login-content">
+      <div className="panel-container">
+        <h2 className="panel-header">Zaloguj się</h2>
+        <img className="panel-decoration" src={decoration} alt="decoration" />
+        <form className="panel-form">
+          <div className="panel-content">
             <label htmlFor="email">Email</label>
             <input type="text" name="email" />
             <label htmlFor="passworld">Hasło</label>
             <input type="passworld" name="passworld" />
           </div>
-          <div className="login-btns">
-            <Link to="/rejstracja">Załóż konto</Link>
+          <div className="panel-btns">
+            <Link to="/rejestracja">Załóż konto</Link>
             <button type="submit">Zaloguj się</button>
           </div>
         </form>

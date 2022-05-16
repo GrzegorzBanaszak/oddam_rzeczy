@@ -1,7 +1,12 @@
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll/modules";
 const Nav = () => {
+  const nav = useNavigate();
+
+  const handlerLinkClick = () => {
+    nav("/");
+  };
   return (
     <nav className="nav-desktop">
       <div className="nav-top">
@@ -22,15 +27,18 @@ const Nav = () => {
           smooth={true}
           offset={0}
           duration={500}
+          onClick={handlerLinkClick}
         >
           Start
         </ScrollLink>
+
         <ScrollLink
           className="nav-bottom-link"
           to="three-columnes"
           smooth={true}
           offset={0}
           duration={500}
+          onClick={handlerLinkClick}
         >
           O co chodzi?
         </ScrollLink>
@@ -40,6 +48,7 @@ const Nav = () => {
           smooth={true}
           offset={0}
           duration={500}
+          onClick={handlerLinkClick}
         >
           O nas
         </ScrollLink>
@@ -49,6 +58,7 @@ const Nav = () => {
           smooth={true}
           offset={0}
           duration={500}
+          onClick={handlerLinkClick}
         >
           Fundacje i organizacje
         </ScrollLink>
@@ -58,6 +68,7 @@ const Nav = () => {
           smooth={true}
           offset={0}
           duration={500}
+          onClick={handlerLinkClick}
         >
           Kontakt
         </ScrollLink>
