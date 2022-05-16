@@ -59,6 +59,8 @@
     padding: 0.5rem 1rem;
     text-decoration: none;
     color: $color-gray;
+    background-color: white;
+    cursor: pointer;
   }
   &-link-border {
     border: 1px solid $color-yellow;

@@ -1,7 +1,9 @@
 import React from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll/modules";
+import { DefaultContext } from "../App";
 const Nav = () => {
+  const { user } = React.useContext(DefaultContext);
   const nav = useNavigate();
 
   const handlerLinkClick = () => {
@@ -10,15 +12,21 @@ const Nav = () => {
   return (
     <nav className="nav-desktop">
       <div className="nav-top">
-        <RouterLink className="nav-top-link" to="/logowanie">
-          Zaloguj
-        </RouterLink>
-        <RouterLink
-          className="nav-top-link nav-top-link-border"
-          to="/rejestracja"
-        >
-          Załóż konto
-        </RouterLink>
+        {user ? (
+          <button className="nav-top-link nav-top-link-border">Wyloguj</button>
+        ) : (
+          <>
+            <RouterLink className="nav-top-link" to="/logowanie">
+              Zaloguj
+            </RouterLink>
+            <RouterLink
+              className="nav-top-link nav-top-link-border"
+              to="/rejestracja"
+            >
+              Załóż konto
+            </RouterLink>
+          </>
+        )}
       </div>
       <div className="nav-bottom">
         <ScrollLink

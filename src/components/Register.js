@@ -4,6 +4,9 @@ import NavMobile from "./NavMobile";
 import decoration from "../assets/Decoration.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { auth } from "../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { DefaultContext } from "../App";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [emailErr, setEmailErr] = useState(null);
@@ -13,6 +16,7 @@ const Register = () => {
   const [rePassworldErr, setRePasswordErr] = useState(null);
   const [isPasswordsEqual, setIsPasswordsEqual] = useState(true);
 
+  const { setUser } = React.useContext(DefaultContext);
   //Password validation
   const isPassworldValid = () => {
     if (
@@ -51,6 +55,14 @@ const Register = () => {
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (email.match(mailformat)) {
       if (emailErr) setEmailErr(null);
+
+      if (isPassworldValid()) {
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            setUser(userCredential.user);
+          })
+          .catch((error) => console.log(error.code, error.message));
+      }
     } else {
       setEmailErr("Niepoprawny email");
       isPassworldValid();
