@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
+import NavMobile from "./NavMobile";
 import decoration from "../assets/Decoration.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -43,7 +44,7 @@ const Register = () => {
     }
   };
 
-  const handelFormSubmit = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
     // Regular expressions for email
     const mailformat =
@@ -58,10 +59,15 @@ const Register = () => {
   return (
     <section className="panel">
       <Nav />
+      <NavMobile />
       <div className="panel-container">
         <h2 className="panel-header">Załóż konto</h2>
         <img className="panel-decoration" src={decoration} alt="decoration" />
-        <form className="panel-form" onSubmit={handelFormSubmit}>
+        <form
+          className="panel-form"
+          onSubmit={handleFormSubmit}
+          autoComplete="off"
+        >
           <div className="panel-content">
             <label htmlFor="email">Email</label>
             <input
@@ -71,18 +77,18 @@ const Register = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             {emailErr && <p className="panel-danger">{emailErr}</p>}
-            <label htmlFor="passworld">Hasło</label>
+            <label htmlFor="password">Hasło</label>
             <input
-              type="passworld"
-              name="passworld"
+              type="password"
+              name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             {passwordErr && <p className="panel-danger">{passwordErr}</p>}
-            <label htmlFor="repeat-passworld">Powtórz hasło</label>
+            <label htmlFor="repeat-password">Powtórz hasło</label>
             <input
-              type="passworld"
-              name="repeat-passworld"
+              type="password"
+              name="repeat-password"
               value={rePassword}
               onChange={(e) => setRePassword(e.target.value)}
             />
