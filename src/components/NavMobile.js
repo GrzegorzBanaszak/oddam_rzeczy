@@ -1,10 +1,17 @@
 import React from "react";
 import { useState } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll/modules";
 import toggle from "../assets/toggle.png";
 const NavMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const nav = useNavigate();
+
+  const handlerLinkClick = () => {
+    nav("/");
+    setIsOpen(false);
+  };
   return (
     <nav className="nav-mobile">
       <div className="nav-mobile-top">
@@ -34,6 +41,7 @@ const NavMobile = () => {
             smooth={true}
             offset={0}
             duration={500}
+            onClick={handlerLinkClick}
           >
             Start
           </ScrollLink>
@@ -43,6 +51,7 @@ const NavMobile = () => {
             smooth={true}
             offset={0}
             duration={500}
+            onClick={handlerLinkClick}
           >
             O co chodzi?
           </ScrollLink>
@@ -52,6 +61,7 @@ const NavMobile = () => {
             smooth={true}
             offset={0}
             duration={500}
+            onClick={handlerLinkClick}
           >
             O nas
           </ScrollLink>
@@ -61,6 +71,7 @@ const NavMobile = () => {
             smooth={true}
             offset={50}
             duration={500}
+            onClick={handlerLinkClick}
           >
             Fundacje i organizacje
           </ScrollLink>
@@ -70,6 +81,7 @@ const NavMobile = () => {
             smooth={true}
             offset={50}
             duration={500}
+            onClick={handlerLinkClick}
           >
             Kontakt
           </ScrollLink>

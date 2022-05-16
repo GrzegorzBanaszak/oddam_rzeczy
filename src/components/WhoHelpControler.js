@@ -7,7 +7,7 @@ const WhoHelpControler = ({ children, type, isSelected, setType }) => {
   return (
     <div
       onClick={handleClick}
-      className={`who-help-controler ${isSelected && "active"}`}
+      className={`who-help-controler ${isSelected ? "active" : ""}`}
     >
       {children}
     </div>
