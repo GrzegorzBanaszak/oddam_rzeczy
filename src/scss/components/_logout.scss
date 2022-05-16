@@ -1,0 +1,26 @@
+.logout {
+  color: $color-green;
+  margin: 0 10vw;
+}
+
+.logout-container {
+  display: flex;
+  padding-top: 8rem;
+  align-items: center;
+  flex-direction: column;
+}
+.logout-header {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.logout-decoration {
+  margin: 2rem;
+}
+
+.logout-link {
+  text-decoration: none;
+  color: $color-green;
+  border: 1px solid $color-green;
+  padding: 1rem;
+}

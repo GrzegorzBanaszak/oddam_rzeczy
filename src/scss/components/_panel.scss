@@ -1,5 +1,4 @@
 .panel {
-  height: calc(100vh - 120px);
   color: $color-green;
   margin: 0 10vw;
 }
@@ -9,7 +8,6 @@
   padding-top: 8rem;
   align-items: center;
   flex-direction: column;
-  height: 100%;
 }
 
 .panel-header {
