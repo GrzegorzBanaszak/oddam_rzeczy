@@ -2,13 +2,21 @@ import React from "react";
 import Nav from "./Nav";
 import NavMobile from "./NavMobile";
 import decoration from "../assets/Decoration.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
+import { DefaultContext } from "../App";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [emailErr, setEmailErr] = useState(null);
   const [password, setPassword] = useState("");
   const [passwordErr, setPasswordErr] = useState(null);
+
+  //Navigation
+  const nav = useNavigate();
+  //Context API
+  const { setUser } = React.useContext(DefaultContext);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -16,8 +24,12 @@ const Login = () => {
     const mailformat =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (password.length > 5 && email.match(mailformat)) {
-      if (emailErr) setEmailErr(null);
-      if (passwordErr) setPasswordErr(null);
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          setUser(userCredential.user);
+          nav("/");
+        })
+        .catch((error) => console.log(error.code, error.message));
     } else {
       if (!email.match(mailformat)) {
         setEmailErr("Niepoprawny email");

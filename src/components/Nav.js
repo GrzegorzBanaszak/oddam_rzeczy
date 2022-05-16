@@ -1,19 +1,33 @@
+import { signOut } from "firebase/auth";
 import React from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll/modules";
 import { DefaultContext } from "../App";
+import { auth } from "../firebase";
 const Nav = () => {
-  const { user } = React.useContext(DefaultContext);
+  const { user, setUser } = React.useContext(DefaultContext);
   const nav = useNavigate();
 
   const handlerLinkClick = () => {
     nav("/");
   };
+
+  const logoutHandel = () => {
+    signOut(auth).then(() => {
+      setUser(null);
+      nav("/wylogowanie");
+    });
+  };
   return (
     <nav className="nav-desktop">
       <div className="nav-top">
         {user ? (
-          <button className="nav-top-link nav-top-link-border">Wyloguj</button>
+          <button
+            className="nav-top-link nav-top-link-border"
+            onClick={logoutHandel}
+          >
+            Wyloguj
+          </button>
         ) : (
           <>
             <RouterLink className="nav-top-link" to="/logowanie">

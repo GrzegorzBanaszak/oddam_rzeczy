@@ -2,12 +2,13 @@ import React from "react";
 import Nav from "./Nav";
 import NavMobile from "./NavMobile";
 import decoration from "../assets/Decoration.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { auth } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { DefaultContext } from "../App";
 const Register = () => {
+  //State for register form
   const [email, setEmail] = useState("");
   const [emailErr, setEmailErr] = useState(null);
   const [password, setPassword] = useState("");
@@ -16,6 +17,9 @@ const Register = () => {
   const [rePassworldErr, setRePasswordErr] = useState(null);
   const [isPasswordsEqual, setIsPasswordsEqual] = useState(true);
 
+  //Navigation
+  const nav = useNavigate();
+  //Context API
   const { setUser } = React.useContext(DefaultContext);
   //Password validation
   const isPassworldValid = () => {
@@ -60,6 +64,7 @@ const Register = () => {
         createUserWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
             setUser(userCredential.user);
+            nav("/");
           })
           .catch((error) => console.log(error.code, error.message));
       }
