@@ -2,7 +2,7 @@ import "./scss/main.scss";
 import "./scss/reset.scss";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/Home";
-import Form from "./components/Form";
+import GiveForm from "./components/GiveForm";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Logout from "./components/Logout";
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route
             path="/oddaj-rzeczy"
-            element={user ? <Form /> : <Navigate to="/logowanie" />}
+            element={user ? <GiveForm /> : <Navigate to="/logowanie" />}
           />
           <Route path="/logowanie" element={<Login />} />
           <Route path="/rejestracja" element={<Register />} />
