@@ -17,6 +17,9 @@
 .steps-content {
   margin: 0 10vw;
   padding: 1rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   h5 {
     margin-top: 1rem;
     color: $color-green;
@@ -24,30 +27,69 @@
   }
   h3 {
     margin-top: 5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
-  .select-container {
-    margin-top: 2rem;
-  }
-  .select-element {
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    span {
-      display: block;
-      width: 2rem;
-      height: 2rem;
-      border: 2px solid $color-green;
-      margin-right: 1rem;
+  .select-container--1 {
+    .select-element {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      span {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid $color-green;
+        margin-right: 1rem;
+      }
     }
   }
+  .select-container--2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .select-value {
+      position: relative;
+      border: 1px solid $color-green;
+      padding: 0.4rem 1rem;
+      width: 15rem;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      img {
+        width: 1.8rem;
+      }
+    }
+    .select-list {
+      position: absolute;
+      bottom: -180px;
+      right: 0;
+      border: 1px solid $color-green;
+      p {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+    }
+
+    .select-element {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .steps-control {
     display: flex;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    margin-top: auto;
     .controler {
       margin-top: 3rem;
       padding: 1rem 2.5rem;
       border: 2px solid $color-green;
+      cursor: pointer;
     }
   }
 }

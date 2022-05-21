@@ -1,9 +1,6 @@
 import React from "react";
 import StepsWaring from "./StepsWaring";
 import bg from "../assets/Background-Form.jpg";
-import { useContext } from "react";
-import { DefaultContext } from "../App";
-import { useState } from "react";
 
 const selectTable = [
   "ubrania, które nadają się do ponownego użycia",
@@ -13,11 +10,7 @@ const selectTable = [
   "Inne",
 ];
 
-const Step1 = () => {
-  const { onSelectHandler, setFormStep } = useContext(DefaultContext);
-
-  const [inputValue, setInputValue] = useState("");
-
+const Step1 = ({ formValues, setFormValues, setFormStep }) => {
   return (
     <section className="steps">
       <StepsWaring>
@@ -34,17 +27,19 @@ const Step1 = () => {
         <div className="steps-content">
           <h5>Krok 1/4</h5>
           <h3>Zaznacz co chcesz oddać:</h3>
-          <div className="select-container">
+          <div className="select-container--1">
             {selectTable.map((select, index) => (
               <div
                 key={index + 1254}
                 className="select-element"
-                onClick={() => setInputValue(select)}
+                onClick={() =>
+                  setFormValues((prev) => ({ ...prev, step1: select }))
+                }
               >
                 <span
                   style={{
                     backgroundColor:
-                      inputValue === select ? "#FAD648" : "transparent",
+                      formValues.step1 === select ? "#FAD648" : "transparent",
                   }}
                 ></span>
                 {select}
@@ -52,13 +47,15 @@ const Step1 = () => {
             ))}
           </div>
           <div className="steps-control">
-            <div
-              to="step-2"
-              className="controler"
-              onClick={() => setFormStep(2)}
-            >
-              Dalej
-            </div>
+            {formValues.step1 && (
+              <div
+                to="step-2"
+                className="controler"
+                onClick={() => setFormStep(2)}
+              >
+                Dalej
+              </div>
+            )}
           </div>
         </div>
       </div>
