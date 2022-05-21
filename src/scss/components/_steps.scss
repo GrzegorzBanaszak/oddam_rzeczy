@@ -1,0 +1,45 @@
+.steps-waring {
+  padding: 2rem 0;
+  background-color: $color-yellow;
+  div {
+    margin: 0 10vh;
+  }
+  h4 {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+.steps-container {
+  height: 85vh;
+}
+
+.steps-content {
+  margin: 0 10vw;
+  padding: 1rem 0;
+  h5 {
+    margin-top: 1rem;
+    color: $color-green;
+    font-size: 1.3rem;
+  }
+  h3 {
+    margin-top: 5rem;
+    font-size: 2.5rem;
+  }
+  .select-container {
+    margin-top: 2rem;
+  }
+  .select-element {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    span {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      border: 2px solid $color-green;
+      margin-right: 1rem;
+    }
+  }
+}
