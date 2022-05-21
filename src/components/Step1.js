@@ -1,8 +1,23 @@
 import React from "react";
 import StepsWaring from "./StepsWaring";
 import bg from "../assets/Background-Form.jpg";
+import { useContext } from "react";
+import { DefaultContext } from "../App";
+import { useState } from "react";
+
+const selectTable = [
+  "ubrania, które nadają się do ponownego użycia",
+  "ubrania, do wyrzucenia",
+  "zabawki",
+  "książki",
+  "Inne",
+];
 
 const Step1 = () => {
+  const { onSelectHandler, setFormStep } = useContext(DefaultContext);
+
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <section className="steps">
       <StepsWaring>
@@ -20,20 +35,29 @@ const Step1 = () => {
           <h5>Krok 1/4</h5>
           <h3>Zaznacz co chcesz oddać:</h3>
           <div className="select-container">
-            <div className="select-element">
-              <span></span>ubrania, które nadają się do ponownego użycia
-            </div>
-            <div className="select-element">
-              <span></span>ubrania, do wyrzucenia
-            </div>
-            <div className="select-element">
-              <span></span>zabawki
-            </div>
-            <div className="select-element">
-              <span></span>książki
-            </div>
-            <div className="select-element">
-              <span></span>Inne
+            {selectTable.map((select, index) => (
+              <div
+                key={index + 1254}
+                className="select-element"
+                onClick={() => setInputValue(select)}
+              >
+                <span
+                  style={{
+                    backgroundColor:
+                      inputValue === select ? "#FAD648" : "transparent",
+                  }}
+                ></span>
+                {select}
+              </div>
+            ))}
+          </div>
+          <div className="steps-control">
+            <div
+              to="step-2"
+              className="controler"
+              onClick={() => setFormStep(2)}
+            >
+              Dalej
             </div>
           </div>
         </div>

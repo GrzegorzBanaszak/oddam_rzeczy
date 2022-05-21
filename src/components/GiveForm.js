@@ -2,8 +2,29 @@ import React from "react";
 import Nav from "./Nav";
 import openImage from "../assets/Form-Hero-Image.jpg";
 import decoration from "../assets/Decoration.svg";
-import { Outlet } from "react-router-dom";
+import { useState } from "react";
+import Step1 from "../components/Step1";
+import Step2 from "../components/Step2";
+import Step3 from "../components/Step3";
+import Step4 from "../components/Step4";
 const GiveForm = () => {
+  const [formValues, setFormValues] = useState({});
+  const [formStep, setFormStep] = useState(1);
+
+  const renderStep = () => {
+    switch (formStep) {
+      case 1:
+        return <Step1 formValues={formValues} />;
+      case 2:
+        return <Step2 formValues={formValues} />;
+      case 3:
+        return <Step3 formValues={formValues} />;
+      case 4:
+        return <Step4 formValues={formValues} />;
+      default:
+        <div>Error</div>;
+    }
+  };
   return (
     <>
       <section className="give-open">
@@ -43,7 +64,7 @@ const GiveForm = () => {
           </div>
         </div>
       </section>
-      <Outlet />
+      {renderStep()}
     </>
   );
 };
