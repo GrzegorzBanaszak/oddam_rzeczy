@@ -11,7 +11,11 @@ import Step4 from "../components/Step4";
 const formValuesDef = {
   step1: "",
   step2: "",
-  step3: "",
+  step3: {
+    location: "",
+    whoHelp: "",
+    organization: "",
+  },
   step4: "",
 };
 const GiveForm = () => {
