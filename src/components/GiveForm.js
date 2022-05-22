@@ -17,7 +17,15 @@ const formValuesDef = {
     whoHelp: "",
     organization: "",
   },
-  step4: "",
+  step4: {
+    postcode: "",
+    phoneNumber: "",
+    street: "",
+    time: "",
+    data: "",
+    comments: "",
+    city: "",
+  },
 };
 const GiveForm = () => {
   const [formValues, setFormValues] = useState(formValuesDef);

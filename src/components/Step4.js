@@ -1,10 +1,65 @@
 import React from "react";
 import StepsWaring from "./StepsWaring";
 import bg from "../assets/Background-Form.jpg";
-import arrowDown from "../assets/Icon-Arrow-Down.svg";
-import arrowUp from "../assets/Icon-Arrow-Up.svg";
-import { useState } from "react";
 const Step4 = ({ formValues, setFormValues, setFormStep }) => {
+  const setNewValue = (type, value) => {
+    setFormValues((prev) => ({
+      ...prev,
+      step4: { ...prev.step4, [type]: value },
+    }));
+  };
+
+  const inputChangeHandel = (e) => {
+    const regOnlyNumber = /^[0-9]*$/;
+    const regTime = /^[0-9]|[:]*$/;
+    const regaxData = /^[0-9]|[.]*$/;
+    switch (e.target.name) {
+      case "postcode":
+        if (e.target.value.match(regOnlyNumber) && e.target.value.length < 6) {
+          setNewValue(e.target.name, e.target.value);
+        }
+        break;
+      case "phoneNumber":
+        if (e.target.value.match(regOnlyNumber) && e.target.value.length < 10) {
+          setNewValue(e.target.name, e.target.value);
+        }
+        break;
+      case "time":
+        if (e.target.value.match(regTime) && e.target.value.length < 6) {
+          setNewValue(e.target.name, e.target.value);
+        }
+
+        break;
+      case "data":
+        if (e.target.value.match(regaxData) && e.target.value.length < 11) {
+          setNewValue(e.target.name, e.target.value);
+        }
+
+        break;
+      default:
+        setNewValue(e.target.name, e.target.value);
+
+        break;
+    }
+  };
+
+  const isFormValid = () => {
+    const { postcode, phoneNumber, street, time, data, comments, city } =
+      formValues.step4;
+    if (
+      postcode.length > 0 &&
+      phoneNumber.length > 0 &&
+      street.length > 0 &&
+      time.length > 0 &&
+      data.length > 0 &&
+      comments.length > 0 &&
+      city.length > 0
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
   return (
     <section className="steps">
       <StepsWaring>
@@ -25,28 +80,71 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
             <div className="select-col">
               <h4 className="select-subtitle">Adres odbioru:</h4>
               <div className="steps-fild">
-                Ulica: <input type="text" />
+                Ulica:
+                <input
+                  type="text"
+                  name="street"
+                  onChange={inputChangeHandel}
+                  value={formValues.step4.street}
+                />
               </div>
               <div className="steps-fild">
-                Miasto: <input type="text" />
+                Miasto:
+                <input
+                  type="text"
+                  name="city"
+                  onChange={inputChangeHandel}
+                  value={formValues.step4.city}
+                />
               </div>
               <div className="steps-fild">
-                Kod pocztowy: <input type="text" />
+                Kod pocztowy:
+                <input
+                  type="text"
+                  name="postcode"
+                  onChange={inputChangeHandel}
+                  value={formValues.step4.postcode}
+                />
               </div>
               <div className="steps-fild">
-                Numer telefonu: <input type="text" />
+                Numer telefonu:
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  onChange={inputChangeHandel}
+                  value={formValues.step4.phoneNumber}
+                />
               </div>
             </div>
             <div className="select-col">
               <h4 className="select-subtitle">Termin odbioru:</h4>
               <div className="steps-fild">
-                Data: <input type="text" />
+                Data:
+                <input
+                  type="text"
+                  name="data"
+                  onChange={inputChangeHandel}
+                  value={formValues.step4.data}
+                />
               </div>
               <div className="steps-fild">
-                Godzina: <input type="text" />
+                Godzina:{" "}
+                <input
+                  type="text"
+                  name="time"
+                  onChange={inputChangeHandel}
+                  value={formValues.step4.time}
+                />
               </div>
               <div className="steps-fild">
-                Uwagi dla kuriera: <textarea name="" cols="18" />
+                Uwagi dla kuriera:{" "}
+                <textarea
+                  cols="18"
+                  rows="6"
+                  name="comments"
+                  onChange={inputChangeHandel}
+                  value={formValues.step4.comments}
+                />
               </div>
             </div>
           </div>
@@ -58,7 +156,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
             >
               Wstecz
             </div>
-            {formValues.step2 && (
+            {isFormValid() && (
               <div
                 to="step-2"
                 className="controler"

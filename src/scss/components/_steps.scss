@@ -129,7 +129,7 @@
     .controler {
       margin-top: 3rem;
       padding: 1rem 2.5rem;
-      border: 2px solid $color-green;
+      border: 2px solid $color-gray;
       cursor: pointer;
     }
   }
@@ -147,14 +147,14 @@
   }
   .select-who--item {
     padding: 0.7rem 0.5rem;
-    border: 2px solid $color-green;
+    border: 2px solid $color-gray;
     cursor: pointer;
   }
 
   .steps-organization {
     background-color: transparent;
     outline: none;
-    border: 1px solid $color-green;
+    border: 1px solid $color-gray;
     width: 25rem;
   }
   .steps-fild {
@@ -164,14 +164,15 @@
     input {
       margin-left: 0.5rem;
       background-color: transparent;
-      border: 1px solid $color-green;
+      border: 2px solid $color-gray;
+      outline: none;
     }
     textarea {
       display: block;
       resize: none;
       margin-left: 0.5rem;
       background-color: transparent;
-      border: 1px solid $color-green;
+      border: 2px solid $color-gray;
     }
   }
 }
