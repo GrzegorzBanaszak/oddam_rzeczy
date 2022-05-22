@@ -112,6 +112,15 @@
       align-items: center;
     }
   }
+  .select-container--4 {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.4rem;
+    i .select-col {
+      width: 50%;
+    }
+  }
   .steps-control {
     display: flex;
     gap: 1rem;
@@ -147,5 +156,22 @@
     outline: none;
     border: 1px solid $color-green;
     width: 25rem;
+  }
+  .steps-fild {
+    margin: 1.2rem 0;
+    display: flex;
+    justify-content: space-between;
+    input {
+      margin-left: 0.5rem;
+      background-color: transparent;
+      border: 1px solid $color-green;
+    }
+    textarea {
+      display: block;
+      resize: none;
+      margin-left: 0.5rem;
+      background-color: transparent;
+      border: 1px solid $color-green;
+    }
   }
 }
