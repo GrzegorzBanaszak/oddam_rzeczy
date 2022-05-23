@@ -8,6 +8,7 @@ import Step2 from "../components/Step2";
 import Step3 from "../components/Step3";
 import Step4 from "../components/Step4";
 import HomeContact from "./HomeContact";
+import StepSummary from "./StepSummary";
 
 const formValuesDef = {
   step1: "",
@@ -60,6 +61,14 @@ const GiveForm = () => {
       case 4:
         return (
           <Step4
+            formValues={formValues}
+            setFormValues={setFormValues}
+            setFormStep={setFormStep}
+          />
+        );
+      case 5:
+        return (
+          <StepSummary
             formValues={formValues}
             setFormValues={setFormValues}
             setFormStep={setFormStep}

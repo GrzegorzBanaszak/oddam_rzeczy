@@ -128,7 +128,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
                 />
               </div>
               <div className="steps-fild">
-                Godzina:{" "}
+                Godzina:
                 <input
                   type="text"
                   name="time"
@@ -137,7 +137,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
                 />
               </div>
               <div className="steps-fild">
-                Uwagi dla kuriera:{" "}
+                Uwagi dla kuriera:
                 <textarea
                   cols="18"
                   rows="6"
