@@ -44,7 +44,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
   };
 
   const isFormValid = () => {
-    const { postcode, phoneNumber, street, time, data, comments, city } =
+    const { postcode, phoneNumber, street, time, data, city } =
       formValues.step4;
     if (
       postcode.length > 0 &&
@@ -52,7 +52,6 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
       street.length > 0 &&
       time.length > 0 &&
       data.length > 0 &&
-      comments.length > 0 &&
       city.length > 0
     ) {
       return true;

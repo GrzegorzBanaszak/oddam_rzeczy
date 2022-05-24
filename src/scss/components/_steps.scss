@@ -190,3 +190,17 @@
     margin-right: 1rem;
   }
 }
+
+.summery-row--2 {
+  margin-top: 2rem;
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+.summery-col {
+  .summer-table {
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
