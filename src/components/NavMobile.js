@@ -3,28 +3,49 @@ import { useState } from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll/modules";
 import toggle from "../assets/toggle.png";
+import { DefaultContext } from "../App";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
 const NavMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { user, setUser } = React.useContext(DefaultContext);
   const nav = useNavigate();
 
   const handlerLinkClick = () => {
     nav("/");
     setIsOpen(false);
   };
+
+  const logoutHandel = () => {
+    signOut(auth).then(() => {
+      setUser(null);
+      nav("/wylogowanie");
+    });
+  };
   return (
     <nav className="nav-mobile">
       <div className="nav-mobile-top">
         <div className="nav-mobile-links">
-          <RouterLink className="nav-top-link" to="/logowanie">
-            Zaloguj
-          </RouterLink>
-          <RouterLink
-            className="nav-top-link nav-top-link-border"
-            to="/rejestracja"
-          >
-            Załóż konto
-          </RouterLink>
+          {user ? (
+            <button
+              className="nav-top-link nav-top-link-border"
+              onClick={logoutHandel}
+            >
+              Wyloguj
+            </button>
+          ) : (
+            <>
+              <RouterLink className="nav-top-link" to="/logowanie">
+                Zaloguj
+              </RouterLink>
+              <RouterLink
+                className="nav-top-link nav-top-link-border"
+                to="/rejestracja"
+              >
+                Załóż konto
+              </RouterLink>
+            </>
+          )}
         </div>
         <img
           className="nav-toggle"
