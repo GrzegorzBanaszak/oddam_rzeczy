@@ -6,6 +6,10 @@ import arrowUp from "../assets/Icon-Arrow-Up.svg";
 import { useState } from "react";
 const Step2 = ({ formValues, setFormValues, setFormStep }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const bagsNumberHandlerChange = (number) => {
+    setFormValues((prev) => ({ ...prev, numberOfBags: number }));
+  };
   return (
     <section className="steps">
       <StepsWaring>
@@ -28,45 +32,17 @@ const Step2 = ({ formValues, setFormValues, setFormStep }) => {
               className="select-value"
               onClick={() => setIsOpen((prev) => !prev)}
             >
-              {formValues.step2 === "" ? "- wybierz -" : formValues.step2}
+              {formValues.numberOfBags === ""
+                ? "- wybierz -"
+                : formValues.numberOfBags}
               <img src={isOpen ? arrowDown : arrowUp} alt="arrow" />
               {isOpen && (
                 <div className="select-list">
-                  <p
-                    onClick={() =>
-                      setFormValues((prev) => ({ ...prev, step2: 1 }))
-                    }
-                  >
-                    1
-                  </p>
-                  <p
-                    onClick={() =>
-                      setFormValues((prev) => ({ ...prev, step2: 2 }))
-                    }
-                  >
-                    2
-                  </p>
-                  <p
-                    onClick={() =>
-                      setFormValues((prev) => ({ ...prev, step2: 3 }))
-                    }
-                  >
-                    3
-                  </p>
-                  <p
-                    onClick={() =>
-                      setFormValues((prev) => ({ ...prev, step2: 4 }))
-                    }
-                  >
-                    4
-                  </p>
-                  <p
-                    onClick={() =>
-                      setFormValues((prev) => ({ ...prev, step2: 5 }))
-                    }
-                  >
-                    5
-                  </p>
+                  <p onClick={() => bagsNumberHandlerChange(1)}>1</p>
+                  <p onClick={() => bagsNumberHandlerChange(2)}>2</p>
+                  <p onClick={() => bagsNumberHandlerChange(3)}>3</p>
+                  <p onClick={() => bagsNumberHandlerChange(4)}>4</p>
+                  <p onClick={() => bagsNumberHandlerChange(5)}>5</p>
                 </div>
               )}
             </div>
@@ -79,7 +55,7 @@ const Step2 = ({ formValues, setFormValues, setFormStep }) => {
             >
               Wstecz
             </div>
-            {formValues.step2 && (
+            {formValues.numberOfBags && (
               <div
                 to="step-2"
                 className="controler"

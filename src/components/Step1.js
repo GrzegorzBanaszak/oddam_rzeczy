@@ -33,13 +33,15 @@ const Step1 = ({ formValues, setFormValues, setFormStep }) => {
                 key={index + 1254}
                 className="select-element"
                 onClick={() =>
-                  setFormValues((prev) => ({ ...prev, step1: select }))
+                  setFormValues((prev) => ({ ...prev, whoToGiveBack: select }))
                 }
               >
                 <span
                   style={{
                     backgroundColor:
-                      formValues.step1 === select ? "#FAD648" : "transparent",
+                      formValues.whoToGiveBack === select
+                        ? "#FAD648"
+                        : "transparent",
                   }}
                 ></span>
                 {select}
@@ -47,7 +49,7 @@ const Step1 = ({ formValues, setFormValues, setFormStep }) => {
             ))}
           </div>
           <div className="steps-control">
-            {formValues.step1 && (
+            {formValues.whoToGiveBack && (
               <div
                 to="step-2"
                 className="controler"

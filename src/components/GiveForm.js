@@ -11,8 +11,8 @@ import HomeContact from "./HomeContact";
 import StepSummary from "./StepSummary";
 
 const formValuesDef = {
-  step1: "",
-  step2: "",
+  whoToGiveBack: "",
+  numberOfBags: "",
   step3: {
     location: "",
     whoHelp: "",
