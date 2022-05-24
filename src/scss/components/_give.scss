@@ -1,21 +1,21 @@
 /*#region Open*/
 
 .give-open {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   color: $color-green;
 }
 
 .give-col--left {
-  width: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
+  display: none;
 }
 
 .give-col--right {
-  width: 50%;
-  margin-right: 10vw;
+  margin: 0 0.4rem;
 }
 
 .give-content {
@@ -24,6 +24,7 @@
   align-items: center;
   justify-content: center;
   height: 80%;
+  text-align: center;
 }
 .give-title {
   font-weight: 400;
@@ -41,7 +42,9 @@
 
 .give-steps {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
+  justify-content: center;
   margin-top: 3rem;
   gap: 2rem;
 }
@@ -68,3 +71,18 @@
   }
 }
 /*#endregion */
+@include desktop {
+  .give-open {
+    height: 100vh;
+    flex-direction: row;
+  }
+  .give-col--left {
+    display: block;
+    width: 50%;
+    height: 100%;
+  }
+  .give-col--right {
+    width: 50%;
+    margin-right: 10vh;
+  }
+}

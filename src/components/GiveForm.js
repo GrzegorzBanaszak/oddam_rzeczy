@@ -10,6 +10,7 @@ import Step4 from "../components/Step4";
 import HomeContact from "./HomeContact";
 import StepSummary from "./StepSummary";
 import StepThanks from "./StepThanks";
+import NavMobile from "./NavMobile";
 
 const formValuesDef = {
   whoToGiveBack: "",
@@ -75,6 +76,7 @@ const GiveForm = () => {
   };
   return (
     <>
+      <NavMobile />
       <section className="give-open">
         <div
           className="give-col--left"
