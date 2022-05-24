@@ -18,7 +18,7 @@ const Step3 = ({ formValues, setFormValues, setFormStep }) => {
   const handleOrganizationChange = (e) => {
     setFormValues((prev) => ({
       ...prev,
-      step3: { ...prev.step3, [e.target.name]: e.target.value },
+      [e.target.name]: e.target.value,
     }));
   };
   return (
@@ -43,9 +43,7 @@ const Step3 = ({ formValues, setFormValues, setFormStep }) => {
               className="select-value"
               onClick={() => setIsOpen((prev) => !prev)}
             >
-              {formValues.step3.location === ""
-                ? "- wybierz -"
-                : formValues.step3.location}
+              {formValues.location === "" ? "- wybierz -" : formValues.location}
               <img src={isOpen ? arrowDown : arrowUp} alt="arrow" />
               {isOpen && (
                 <div className="select-list">
@@ -56,7 +54,7 @@ const Step3 = ({ formValues, setFormValues, setFormStep }) => {
                       onClick={() =>
                         setFormValues((prev) => ({
                           ...prev,
-                          step3: { ...prev.step3, location },
+                          location,
                         }))
                       }
                     >
@@ -74,14 +72,14 @@ const Step3 = ({ formValues, setFormValues, setFormStep }) => {
                   className="select-who--item"
                   style={{
                     backgroundColor:
-                      formValues.step3.whoHelp === whoHelp
+                      formValues.whoHelp === whoHelp
                         ? "#FAD648"
                         : "transparent",
                   }}
                   onClick={() =>
                     setFormValues((prev) => ({
                       ...prev,
-                      step3: { ...prev.step3, whoHelp },
+                      whoHelp,
                     }))
                   }
                 >
@@ -95,7 +93,7 @@ const Step3 = ({ formValues, setFormValues, setFormStep }) => {
             <input
               className="steps-organization"
               name="organization"
-              value={formValues.step3.organization}
+              value={formValues.organization}
               onChange={(e) => handleOrganizationChange(e)}
             />
           </div>
@@ -107,7 +105,7 @@ const Step3 = ({ formValues, setFormValues, setFormStep }) => {
             >
               Wstecz
             </div>
-            {formValues.step3.location && formValues.step3.whoHelp && (
+            {formValues.location && formValues.whoHelp && (
               <div
                 to="step-2"
                 className="controler"

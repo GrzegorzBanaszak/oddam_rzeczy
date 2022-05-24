@@ -13,20 +13,16 @@ import StepSummary from "./StepSummary";
 const formValuesDef = {
   whoToGiveBack: "",
   numberOfBags: "",
-  step3: {
-    location: "",
-    whoHelp: "",
-    organization: "",
-  },
-  step4: {
-    postcode: "",
-    phoneNumber: "",
-    street: "",
-    time: "",
-    data: "",
-    comments: "",
-    city: "",
-  },
+  location: "",
+  whoHelp: "",
+  organization: "",
+  postcode: "",
+  phoneNumber: "",
+  street: "",
+  time: "",
+  data: "",
+  comments: "",
+  city: "",
 };
 const GiveForm = () => {
   const [formValues, setFormValues] = useState(formValuesDef);

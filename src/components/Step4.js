@@ -2,10 +2,12 @@ import React from "react";
 import StepsWaring from "./StepsWaring";
 import bg from "../assets/Background-Form.jpg";
 const Step4 = ({ formValues, setFormValues, setFormStep }) => {
+  const { postcode, phoneNumber, street, time, data, comments, city } =
+    formValues;
   const setNewValue = (type, value) => {
     setFormValues((prev) => ({
       ...prev,
-      step4: { ...prev.step4, [type]: value },
+      [type]: value,
     }));
   };
 
@@ -44,8 +46,6 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
   };
 
   const isFormValid = () => {
-    const { postcode, phoneNumber, street, time, data, city } =
-      formValues.step4;
     if (
       postcode.length > 0 &&
       phoneNumber.length > 0 &&
@@ -84,7 +84,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
                   type="text"
                   name="street"
                   onChange={inputChangeHandel}
-                  value={formValues.step4.street}
+                  value={street}
                 />
               </div>
               <div className="steps-fild">
@@ -93,7 +93,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
                   type="text"
                   name="city"
                   onChange={inputChangeHandel}
-                  value={formValues.step4.city}
+                  value={city}
                 />
               </div>
               <div className="steps-fild">
@@ -102,7 +102,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
                   type="text"
                   name="postcode"
                   onChange={inputChangeHandel}
-                  value={formValues.step4.postcode}
+                  value={postcode}
                 />
               </div>
               <div className="steps-fild">
@@ -111,7 +111,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
                   type="text"
                   name="phoneNumber"
                   onChange={inputChangeHandel}
-                  value={formValues.step4.phoneNumber}
+                  value={phoneNumber}
                 />
               </div>
             </div>
@@ -123,7 +123,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
                   type="text"
                   name="data"
                   onChange={inputChangeHandel}
-                  value={formValues.step4.data}
+                  value={data}
                 />
               </div>
               <div className="steps-fild">
@@ -132,7 +132,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
                   type="text"
                   name="time"
                   onChange={inputChangeHandel}
-                  value={formValues.step4.time}
+                  value={time}
                 />
               </div>
               <div className="steps-fild">
@@ -142,7 +142,7 @@ const Step4 = ({ formValues, setFormValues, setFormStep }) => {
                   rows="6"
                   name="comments"
                   onChange={inputChangeHandel}
-                  value={formValues.step4.comments}
+                  value={comments}
                 />
               </div>
             </div>
