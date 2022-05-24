@@ -1,23 +1,48 @@
+import { addDoc, collection } from "firebase/firestore";
 import React from "react";
 import bg from "../assets/Background-Form.jpg";
 import clothes from "../assets/clothes.png";
 import recycling from "../assets/recycling.png";
-const StepSummary = ({ formValues, setFormValues, setFormStep }) => {
-  const { step1, step2, step3, step4 } = formValues;
+import { db } from "../firebase";
+const StepSummary = ({ formValues, setFormStep }) => {
+  const {
+    whoToGiveBack,
+    numberOfBags,
+    location,
+    whoHelp,
+    postcode,
+    phoneNumber,
+    street,
+    time,
+    data,
+    comments,
+    city,
+  } = formValues;
+  const donateRef = collection(db, "thingsToDonate");
+
+  const summerySubmit = async () => {
+    try {
+      await addDoc(donateRef, formValues);
+      setFormStep(6);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const formatPhone = () => {
     let subString = "";
     for (let i = 0; i < 9; i = i + 3) {
       if (i === 0) {
-        subString += step4.phoneNumber.substring(i, i + 3);
+        subString += phoneNumber.substring(i, i + 3);
       } else {
-        subString += " " + step4.phoneNumber.substring(i, i + 3);
+        subString += " " + phoneNumber.substring(i, i + 3);
       }
     }
     return subString;
   };
 
   const formatPostCode = () => {
-    return step4.postcode.substr(0, 2) + "-" + step4.postcode.substr(2);
+    return postcode.substr(0, 2) + "-" + postcode.substr(2);
   };
 
   return (
@@ -32,19 +57,19 @@ const StepSummary = ({ formValues, setFormValues, setFormStep }) => {
             <h4 className="summery-title">Oddajesz:</h4>
             <div className="summery-info">
               <img src={clothes} alt="clothes" />
-              {`${step2} worki,${step1},${step3.whoHelp}`}
+              {`${numberOfBags} worki,${whoToGiveBack},${whoHelp}`}
             </div>
             <div className="summery-info">
               <img src={recycling} alt="recycling" />
-              {`do lokalizacji: ${formValues.step3.location}`}
+              {`do lokalizacji: ${location}`}
             </div>
           </div>
           <div className="summery-row--2">
             <div className="summery-col">
               <h4 className="summery-title">Adres odbioru:</h4>
               <div className="summer-table">
-                Ulica<p>{step4.street}</p>
-                Miasto <p>{step4.city}</p>
+                Ulica<p>{street}</p>
+                Miasto <p>{city}</p>
                 Kod pocztowy <p>{formatPostCode()}</p>
                 Numer telefonu <p>{formatPhone()}</p>
               </div>
@@ -52,9 +77,9 @@ const StepSummary = ({ formValues, setFormValues, setFormStep }) => {
             <div className="summery-col">
               <h4 className="summery-title">Termin odbioru:</h4>
               <div className="summer-table">
-                Data <p>{step4.data}</p>
-                Godzina <p>{step4.time}</p>
-                Uwagi dla kuriera <p>{step4.comments}</p>
+                Data <p>{data}</p>
+                Godzina <p>{time}</p>
+                Uwagi dla kuriera <p>{comments}</p>
               </div>
             </div>
           </div>
@@ -66,7 +91,7 @@ const StepSummary = ({ formValues, setFormValues, setFormStep }) => {
             >
               Wstecz
             </div>
-            <div to="step-2" className="controler">
+            <div to="step-2" className="controler" onClick={summerySubmit}>
               Potwierdzam
             </div>
           </div>

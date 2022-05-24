@@ -9,6 +9,7 @@ import Step3 from "../components/Step3";
 import Step4 from "../components/Step4";
 import HomeContact from "./HomeContact";
 import StepSummary from "./StepSummary";
+import StepThanks from "./StepThanks";
 
 const formValuesDef = {
   whoToGiveBack: "",
@@ -64,12 +65,10 @@ const GiveForm = () => {
         );
       case 5:
         return (
-          <StepSummary
-            formValues={formValues}
-            setFormValues={setFormValues}
-            setFormStep={setFormStep}
-          />
+          <StepSummary formValues={formValues} setFormStep={setFormStep} />
         );
+      case 6:
+        return <StepThanks />;
       default:
         <div>Error</div>;
     }
