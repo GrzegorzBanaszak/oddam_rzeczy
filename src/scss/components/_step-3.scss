@@ -1,0 +1,59 @@
+.select-container--3 {
+  .select-value {
+    position: relative;
+    border: 1px solid $color-green;
+    padding: 0.4rem 1rem;
+    width: 15rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    img {
+      width: 1.8rem;
+    }
+  }
+  .select-list {
+    position: absolute;
+    width: 100%;
+    bottom: -180px;
+    left: 0;
+    background-color: #e8e9e4;
+    border: 1px solid $color-green;
+    p {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .select-element {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .select-who {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    // width: 30%;
+  }
+  .select-who--item {
+    padding: 0.7rem 0.5rem;
+    border: 2px solid $color-gray;
+    cursor: pointer;
+  }
+  .steps-organization {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid $color-gray;
+    width: 16rem;
+  }
+}
+
+@include desktop {
+  .select-who {
+    width: 30%;
+    width: 25rem;
+  }
+}

@@ -11,7 +11,7 @@
 }
 
 .steps-container {
-  height: 85vh;
+  min-height: 100vh;
 }
 
 .steps-content {
@@ -30,97 +30,7 @@
     font-size: 2rem;
     margin-bottom: 2rem;
   }
-  .select-container--1 {
-    .select-element {
-      margin-top: 1.5rem;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      span {
-        display: block;
-        width: 2rem;
-        height: 2rem;
-        border: 2px solid $color-green;
-        margin-right: 1rem;
-      }
-    }
-  }
-  .select-container--2 {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    .select-value {
-      position: relative;
-      border: 1px solid $color-green;
-      padding: 0.4rem 1rem;
-      width: 15rem;
-      background-color: transparent;
-      display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-      img {
-        width: 1.8rem;
-      }
-    }
-    .select-list {
-      position: absolute;
-      bottom: -180px;
-      right: 0;
-      border: 1px solid $color-green;
-      p {
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-      }
-    }
 
-    .select-element {
-      margin-top: 1.5rem;
-      display: flex;
-      align-items: center;
-    }
-  }
-  .select-container--3 {
-    .select-value {
-      position: relative;
-      border: 1px solid $color-green;
-      padding: 0.4rem 1rem;
-      width: 15rem;
-      background-color: transparent;
-      display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-      img {
-        width: 1.8rem;
-      }
-    }
-    .select-list {
-      position: absolute;
-      width: 100%;
-      bottom: -180px;
-      left: 0;
-      background-color: #e8e9e4;
-      border: 1px solid $color-green;
-      p {
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-      }
-    }
-
-    .select-element {
-      margin-top: 1.5rem;
-      display: flex;
-      align-items: center;
-    }
-  }
-  .select-container--4 {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    gap: 1.4rem;
-    i .select-col {
-      width: 50%;
-    }
-  }
   .steps-control {
     display: flex;
     gap: 1rem;
@@ -136,87 +46,5 @@
   .select-subtitle {
     font-weight: 700;
     margin: 1rem 0;
-  }
-  .select-who {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    gap: 1rem;
-    width: 30%;
-  }
-  .select-who--item {
-    padding: 0.7rem 0.5rem;
-    border: 2px solid $color-gray;
-    cursor: pointer;
-  }
-
-  .steps-organization {
-    background-color: transparent;
-    outline: none;
-    border: 1px solid $color-gray;
-    width: 25rem;
-  }
-  .steps-fild {
-    margin: 1.2rem 0;
-    display: flex;
-    justify-content: space-between;
-    input {
-      margin-left: 0.5rem;
-      background-color: transparent;
-      border: 2px solid $color-gray;
-      outline: none;
-    }
-    textarea {
-      display: block;
-      resize: none;
-      margin-left: 0.5rem;
-      background-color: transparent;
-      border: 2px solid $color-gray;
-    }
-  }
-}
-
-.summery-title {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.summery-info {
-  margin: 0.5rem 0;
-  display: flex;
-  align-items: center;
-  img {
-    margin-right: 1rem;
-  }
-}
-
-.summery-row--2 {
-  margin-top: 2rem;
-  display: flex;
-  width: 40%;
-  justify-content: space-between;
-}
-.summery-col {
-  .summer-table {
-    display: grid;
-    gap: 1rem 2rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.summery-thangs {
-  width: 60%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: $color-green;
-  font-size: 1.3rem;
-  h2 {
-    text-align: center;
-    width: 50%;
-    margin-bottom: 1.4rem;
   }
 }

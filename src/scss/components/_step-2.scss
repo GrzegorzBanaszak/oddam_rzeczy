@@ -1,0 +1,34 @@
+.select-container--2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  .select-value {
+    position: relative;
+    border: 1px solid $color-green;
+    padding: 0.4rem 1rem;
+    width: 15rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    img {
+      width: 1.8rem;
+    }
+  }
+  .select-list {
+    position: absolute;
+    bottom: -180px;
+    right: 0;
+    border: 1px solid $color-green;
+    p {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .select-element {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+}
