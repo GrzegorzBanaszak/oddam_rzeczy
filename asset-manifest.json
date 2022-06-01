@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/oddam_rzeczy/static/css/main.6e70b0ec.css",
+    "main.js": "/oddam_rzeczy/static/js/main.32cbfb58.js",
+    "static/media/columnes.png": "/oddam_rzeczy/static/media/columnes.54dcd134c6b5241e5fbc.png",
+    "static/media/Background-Contact-Form.jpg": "/oddam_rzeczy/static/media/Background-Contact-Form.655c54427d3b66427460.jpg",
+    "static/media/Form-Hero-Image.jpg": "/oddam_rzeczy/static/media/Form-Hero-Image.75cd77265f1736b72327.jpg",
+    "static/media/People.jpg": "/oddam_rzeczy/static/media/People.2fa041c6275e64cce5d4.jpg",
+    "static/media/Home-Hero-Image.jpg": "/oddam_rzeczy/static/media/Home-Hero-Image.0c4f237f9a7b8fab82f4.jpg",
+    "static/media/Background-Form.jpg": "/oddam_rzeczy/static/media/Background-Form.d4bc6c8519918b328514.jpg",
+    "static/media/Icon-1.svg": "/oddam_rzeczy/static/media/Icon-1.bd3d092ac43eb92350ab.svg",
+    "static/media/Instagram.svg": "/oddam_rzeczy/static/media/Instagram.5b663cf3d5105c75e2a282fac26f6d25.svg",
+    "static/media/Icon-4.svg": "/oddam_rzeczy/static/media/Icon-4.f1b3fb6d88016f0f9554.svg",
+    "static/media/Icon-3.svg": "/oddam_rzeczy/static/media/Icon-3.564c1731a0ddca43e1da.svg",
+    "static/media/Facebook.svg": "/oddam_rzeczy/static/media/Facebook.1c1ea3aee560143f21d83ca5be58a379.svg",
+    "static/media/Icon-2.svg": "/oddam_rzeczy/static/media/Icon-2.cfac69a113268e131dcb.svg",
+    "static/media/Signature.svg": "/oddam_rzeczy/static/media/Signature.8f2a001d56e8f7d883e166ac3cc69892.svg",
+    "static/media/Icon-Arrow-Up.svg": "/oddam_rzeczy/static/media/Icon-Arrow-Up.9418ff7029a8519f7723e852710836a5.svg",
+    "static/media/Icon-Arrow-Down.svg": "/oddam_rzeczy/static/media/Icon-Arrow-Down.2c792a10255efa4181184717bde25fe9.svg",
+    "static/media/Decoration.svg": "/oddam_rzeczy/static/media/Decoration.aad75271e33dd889f25b0e24a5e6c0b2.svg",
+    "index.html": "/oddam_rzeczy/index.html",
+    "main.6e70b0ec.css.map": "/oddam_rzeczy/static/css/main.6e70b0ec.css.map",
+    "main.32cbfb58.js.map": "/oddam_rzeczy/static/js/main.32cbfb58.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e70b0ec.css",
+    "static/js/main.32cbfb58.js"
+  ]
+}
