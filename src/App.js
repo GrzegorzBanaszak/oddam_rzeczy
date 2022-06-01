@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <DefaultContext.Provider value={{ user, setUser }}>
         <Routes>
           <Route path="/" element={<Home />} />
